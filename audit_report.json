@@ -1,0 +1,43 @@
+[
+    {
+        "url": "https://example.com",
+        "status": "Success",
+        "headers_audit": {
+            "present": {},
+            "missing": [
+                {
+                    "header": "Strict-Transport-Security",
+                    "purpose": "Enforces secure (HTTPS) connections."
+                },
+                {
+                    "header": "Content-Security-Policy",
+                    "purpose": "Mitigates XSS and data injection attacks."
+                },
+                {
+                    "header": "X-Content-Type-Options",
+                    "purpose": "Prevents MIME-type sniffing (should be 'nosniff')."
+                },
+                {
+                    "header": "X-Frame-Options",
+                    "purpose": "Protects against clickjacking attacks."
+                },
+                {
+                    "header": "Referrer-Policy",
+                    "purpose": "Controls referrer information sent in HTTP requests."
+                },
+                {
+                    "header": "Permissions-Policy",
+                    "purpose": "Restricts browser features like camera and geolocation."
+                }
+            ]
+        },
+        "cors_audit": {
+            "status": "Checked",
+            "acao_header": null,
+            "acac_header": null,
+            "findings": [
+                "No Access-Control-Allow-Origin header found (standard/strict behavior)."
+            ]
+        }
+    }
+]
